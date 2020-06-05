@@ -16,4 +16,9 @@ describe('calculator', () => {
       expect(calculator('2 * 3')).toEqual(['2 * 3', 6]);
     });
   });
+  describe('when the sum is division', () => {
+    it("takes in a sum of '16 / 2' and returns the sum with the correct answer, 8", () => {
+      expect(calculator('16 / 2')).toEqual(['16 / 2', 8]);
+    });
+  });
 });
