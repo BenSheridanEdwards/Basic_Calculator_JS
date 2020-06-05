@@ -12,6 +12,9 @@ const calculator = sum => {
       case '-':
         output.push(firstNumber - secondNumber);
         break;
+      case '*':
+        output.push(firstNumber * secondNumber);
+        break;
       default:
         break;
     }
