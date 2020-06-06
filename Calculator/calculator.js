@@ -15,6 +15,9 @@ const calculator = sum => {
       case '*':
         output.push(firstNumber * secondNumber);
         break;
+      case 'x':
+        output.push(firstNumber * secondNumber);
+        break;
       case '/':
         output.push(firstNumber / secondNumber);
         break;
