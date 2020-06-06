@@ -25,4 +25,11 @@ describe('calculator', () => {
       expect(calculator('16 / 2')).toEqual(['16 / 2', 8]);
     });
   });
+
+  describe('when an invalid input is given', () => {
+    it("throws an error when passed an invalid operator like '=' as part of the sum", () => {
+      const message = 'ArgumentError: Invalid operator, =';
+      expect(() => {calculator('1 = 1')}).toThrowError(message);
+    });
+  });
 });

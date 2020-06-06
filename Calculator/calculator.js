@@ -22,6 +22,7 @@ const calculator = sum => {
         output.push(firstNumber / secondNumber);
         break;
       default:
+        throw new Error(`ArgumentError: Invalid operator, ${operator}`)
         break;
     }
     return output;
