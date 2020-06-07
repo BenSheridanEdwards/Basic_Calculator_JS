@@ -34,10 +34,19 @@ describe('calculator', () => {
       }).toThrowError(message);
     });
 
-    it('throws an error when passed a number when letters instead of numbers are used for the first number in the sum', () => {
-      const message = 'ArgumentError: Only integers can be used to evaluate sums';
+    it('throws an error when letters are passed for numbers instead of integers for the first number in the sum', () => {
+      const message =
+        'ArgumentError: Only integers can be used to evaluate sums';
       expect(() => {
         calculator('one + 1');
+      }).toThrowError(message);
+    });
+
+    it('throws an error when letters are passed for numbers instead of integers for the second number in the sum', () => {
+      const message =
+        'ArgumentError: Only integers can be used to evaluate sums';
+      expect(() => {
+        calculator('1 + one');
       }).toThrowError(message);
     });
   });
