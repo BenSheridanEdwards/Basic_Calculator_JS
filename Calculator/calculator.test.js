@@ -17,7 +17,7 @@ describe('calculator', () => {
     });
 
     it("takes in a sum of '2 x 3' with the traditional times operator and returns the sum with the correct answer, 6", () => {
-      expect(calculator('2 x 3')).toEqual(['2 x 3', 6])
+      expect(calculator('2 x 3')).toEqual(['2 x 3', 6]);
     });
   });
   describe('when the sum is division', () => {
@@ -29,7 +29,16 @@ describe('calculator', () => {
   describe('when an invalid input is given', () => {
     it("throws an error when passed an invalid operator like '=' as part of the sum", () => {
       const message = 'ArgumentError: Invalid operator, =';
-      expect(() => {calculator('1 = 1')}).toThrowError(message);
+      expect(() => {
+        calculator('1 = 1');
+      }).toThrowError(message);
+    });
+
+    it('throws an error when passed a number when letters instead of numbers are used for the first number in the sum', () => {
+      const message = 'ArgumentError: Only integers can be used to evaluate sums';
+      expect(() => {
+        calculator('one + 1');
+      }).toThrowError(message);
     });
   });
 });
