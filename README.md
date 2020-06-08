@@ -52,8 +52,10 @@ Output = ["25 / 5", 5]
 
 ## Code
 
-![JavaScript Code]()
+![JavaScript Code](https://github.com/BenSheridanEdwards/Basic_Calculator_JS/blob/master/images/JavaScriptCode/JavaScriptCode-1.png)
 
 ## Tests
 
-![Jest Tests]()
+![Jest Tests 1](https://github.com/BenSheridanEdwards/Basic_Calculator_JS/blob/master/images/JestTests/JestTests-1.png)
+![Jest Tests 2](https://github.com/BenSheridanEdwards/Basic_Calculator_JS/blob/master/images/JestTests/JestTests-2.png)
+![Jest Tests 3](https://github.com/BenSheridanEdwards/Basic_Calculator_JS/blob/master/images/JestTests/JestTests-3.png)
