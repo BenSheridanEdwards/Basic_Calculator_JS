@@ -28,6 +28,9 @@ const calculator = sum => {
         output.push(firstNumber * secondNumber);
         break;
       case '/':
+        if (secondNumber === 0) {
+          throw new Error('MathError: Numbers can not be divided by zero');
+        }
         output.push(firstNumber / secondNumber);
         break;
       default:

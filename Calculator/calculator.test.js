@@ -24,6 +24,13 @@ describe('calculator', () => {
     it("takes in a sum of '16 / 2' and returns the sum with the correct answer, 8", () => {
       expect(calculator('16 / 2')).toEqual(['16 / 2', 8]);
     });
+
+    it('throws an error when a user tries to divide by zero', () => {
+      const message = 'MathError: Numbers can not be divided by zero';
+      expect(() => {
+        calculator('1 / 0');
+      }).toThrowError(message);
+    });
   });
 
   describe('when an invalid input is given', () => {
