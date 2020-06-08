@@ -12,7 +12,7 @@ describe('calculator', () => {
 
     it("takes in a sum of floats '10.0 + 10.0' and returns the sum with the correct answer as a float, 20.0", () => {
       expect(calculator('10.0 + 10.0')).toEqual(['10.0 + 10.0', 20.0]);
-    })
+    });
   });
   describe('when the sum is subtraction', () => {
     it("takes in a sum of '5 - 1' and returns the sum with the correct answer, 4", () => {
@@ -25,7 +25,7 @@ describe('calculator', () => {
 
     it("takes in a sum of floats '50.0 - 10.0' and returns the sum with the correct answer as a float, 40.0", () => {
       expect(calculator('50.0 - 10.0')).toEqual(['50.0 - 10.0', 40.0]);
-    })
+    });
   });
   describe('when the sum is multiplication', () => {
     it("takes in a sum of '2 * 3' and returns the sum with the correct answer, 6", () => {
@@ -34,6 +34,22 @@ describe('calculator', () => {
 
     it("takes in a sum of '2 x 3' with the traditional times operator and returns the sum with the correct answer, 6", () => {
       expect(calculator('2 x 3')).toEqual(['2 x 3', 6]);
+    });
+
+    it("takes in a sum of '20 * 30' and return the sum with the correct answer, 600", () => {
+      expect(calculator('20 * 30')).toEqual(['20 * 30', 600]);
+    });
+
+    it("takes in a sum of floats '20.0 * 30.0' and returns the sum with the correct answer as a float, 600.0", () => {
+      expect(calculator('20.0 * 30.0')).toEqual(['20.0 * 30.0', 600.0]);
+    });
+
+    it("takes in a sum of '20 x 30' and return the sum with the correct answer, 600", () => {
+      expect(calculator('20 x 30')).toEqual(['20 x 30', 600]);
+    });
+
+    it("takes in a sum of floats '20.0 x 30.0' and returns the sum with the correct answer as a float, 600.0", () => {
+      expect(calculator('20.0 x 30.0')).toEqual(['20.0 x 30.0', 600.0]);
     });
   });
   describe('when the sum is division', () => {
