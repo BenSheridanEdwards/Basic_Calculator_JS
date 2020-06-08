@@ -4,13 +4,18 @@
 
 A basic calculator that does addition, subtraction, multiplication, and division of sums.
 
+This calculator makes academic math papers easier to read by looking for sums, extracting them as strings and evaluating them. Output is the original string followed by the answer in an array. 
+
 This project was built using test-driven development (TDD) with JavaScript & Jest.
 
 ## Specification
 
 ### Core Requirements
 
-To help students read academic papers that involve math equations, write a program the takes in a string of a sum and returns the original sum string along with the correct answer.
+Input: String, sum to be evaluated.
+Output: Array, original sum string followed by answer.
+
+Can evaluate floats as well as integers. If the input is a float the output will also be a float.
 
 Example 1 (Addition): 
 ```
@@ -41,8 +46,9 @@ Output = ["25 / 5", 5]
 
 ### Edge Cases
 
-- An error is raised when a user tries to input the name of a number rather than the integer, for example "one + one".
-- An error is raised when a user tries to use an invalid operator or one that is not currently supported, for example "1 = 1" or "10 % 2".
+- An error is raised when a user tries to input the name of a number rather than the integer or float, for example "one + one"
+- An error is raised when a user tries to use an invalid operator or one that is not currently supported, for example "1 = 1" or "10 % 2"
+- An error is raised when a user tries to divide a number by zero
 
 ## Code
 
