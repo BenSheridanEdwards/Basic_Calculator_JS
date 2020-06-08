@@ -1,8 +1,8 @@
 const calculator = sum => {
   const evaluate = () => {
     if (
-      !/^\d+$/.test(sum.split(' ')[0]) ||
-      !/^\d+$/.test(sum.split(' ')[sum.split(' ').length - 1])
+      !/^[+-]?\d+(\.\d+)?$/.test(sum.split(' ')[0]) ||
+      !/^[+-]?\d+(\.\d+)?$/.test(sum.split(' ')[sum.split(' ').length - 1])
     ) {
       throw new Error(
         'ArgumentError: Only integers can be used to evaluate sums'

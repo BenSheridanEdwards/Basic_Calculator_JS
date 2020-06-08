@@ -5,6 +5,14 @@ describe('calculator', () => {
     it("takes in a sum of '1 + 1' and returns the sum with the correct answer, 2", () => {
       expect(calculator('1 + 1')).toEqual(['1 + 1', 2]);
     });
+
+    it("takes in a sum of '10 + 10' and return the sum with the correct answer, 20", () => {
+      expect(calculator('10 + 10')).toEqual(['10 + 10', 20]);
+    });
+
+    it("takes in a sum of floats '10.0 + 10.0' and returns the sum with the correct answer as a float, 20.0", () => {
+      expect(calculator('10.0 + 10.0')).toEqual(['10.0 + 10.0', 20.0]);
+    })
   });
   describe('when the sum is subtraction', () => {
     it("takes in a sum of '5 - 1' and returns the sum with the correct answer, 4", () => {
