@@ -18,6 +18,14 @@ describe('calculator', () => {
     it("takes in a sum of '5 - 1' and returns the sum with the correct answer, 4", () => {
       expect(calculator('5 - 1')).toEqual(['5 - 1', 4]);
     });
+
+    it("takes in a sum of '50 - 10' and return the sum with the correct answer, 40", () => {
+      expect(calculator('50 - 10')).toEqual(['50 - 10', 40]);
+    });
+
+    it("takes in a sum of floats '50.0 - 10.0' and returns the sum with the correct answer as a float, 40.0", () => {
+      expect(calculator('50.0 - 10.0')).toEqual(['50.0 - 10.0', 40.0]);
+    })
   });
   describe('when the sum is multiplication', () => {
     it("takes in a sum of '2 * 3' and returns the sum with the correct answer, 6", () => {
